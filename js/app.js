@@ -1,5 +1,3 @@
-Eventos = {
-  ;
 document.getElementById('1').addEventListener("click",n1);
 document.getElementById('2').addEventListener("click",n2);
 document.getElementById('3').addEventListener("click",n3);
@@ -16,26 +14,24 @@ document.getElementById('menos').addEventListener("click",operar);
 document.getElementById('por').addEventListener("click",operam);
 document.getElementById('dividido').addEventListener("click",operad);
 document.getElementById("igual").addEventListener("click", showResult);
-}
+
 
 function tamañoTecla(){
-  document.getElementByClassName('tecla').style="width:80%";
+  document.getElementsByClassName('tecla').style="width:80%";
 }
 
 function volverTecla(){
-  document.getElementByClassName('tecla').style="width:100%";
+  document.getElementsByClassName('tecla').style="width:100%";
 }
 
-document.getElementByClassName('tecla').onclick=tamañoTecla;
-document.getElementByClassName('tecla').onmouseup=volverTecla;
+document.getElementsByClassName('tecla').onclick=tamañoTecla;
+document.getElementsByClassName('tecla').onmouseup=volverTecla;
 //Funciones - Escribir números
-Teclas {
 
 
 function n1() {
   let actual = document.getElementById("display").innerHTML;
   document.getElementById("display").innerHTML = actual + "1";
-
 }
 
 function n2() {
@@ -82,7 +78,6 @@ function n0() {
   let actual = document.getElementById("display").innerHTML;
   document.getElementById("display").innerHTML = actual + "0"
 }
-
 //Funciones - Ejecutar Operaciones
 function operas() {
   let actual = document.getElementById("display").innerHTML;
@@ -103,7 +98,7 @@ function operad() {
   let actual = document.getElementById("display").innerHTML;
   document.getElementById("display").innerHTML = actual + "/";
 }
-}
+
 function showResult(){
   let actual = document.getElementById("display").innerHTML;
   let suma = actual.indexOf("+");
@@ -139,10 +134,10 @@ function reset(){
 
 
 //Limitar a 8 caracteres en el display (FAIL)
-function limitCaracteres(resultado){
-  let result = document.getElementById("display").innerHTML;
-  if(result.length >= 8) {
+function limitCaracteres(){
+  if(display.innerHTML.length == 8 ) {
   document.getElementById("display").innerHTML = error;
     }
   }
+
 limitCaracteres();
