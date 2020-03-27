@@ -1,4 +1,5 @@
-//Eventos al hacer click..
+Eventos = {
+  ;
 document.getElementById('1').addEventListener("click",n1);
 document.getElementById('2').addEventListener("click",n2);
 document.getElementById('3').addEventListener("click",n3);
@@ -15,12 +16,26 @@ document.getElementById('menos').addEventListener("click",operar);
 document.getElementById('por').addEventListener("click",operam);
 document.getElementById('dividido').addEventListener("click",operad);
 document.getElementById("igual").addEventListener("click", showResult);
+}
 
+function tamañoTecla(){
+  document.getElementByClassName('tecla').style="width:80%";
+}
+
+function volverTecla(){
+  document.getElementByClassName('tecla').style="width:100%";
+}
+
+document.getElementByClassName('tecla').onclick=tamañoTecla;
+document.getElementByClassName('tecla').onmouseup=volverTecla;
 //Funciones - Escribir números
+Teclas {
+
 
 function n1() {
   let actual = document.getElementById("display").innerHTML;
-  document.getElementById("display").innerHTML = actual + "1"
+  document.getElementById("display").innerHTML = actual + "1";
+
 }
 
 function n2() {
@@ -88,7 +103,7 @@ function operad() {
   let actual = document.getElementById("display").innerHTML;
   document.getElementById("display").innerHTML = actual + "/";
 }
-
+}
 function showResult(){
   let actual = document.getElementById("display").innerHTML;
   let suma = actual.indexOf("+");
@@ -122,8 +137,8 @@ function reset(){
     document.getElementById("display").innerHTML = " ";
 }
 
-//Limitar a 8 caracteres en el display
 
+//Limitar a 8 caracteres en el display (FAIL)
 function limitCaracteres(resultado){
   let result = document.getElementById("display").innerHTML;
   if(result.length >= 8) {
