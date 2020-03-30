@@ -64,11 +64,14 @@ for(var i =0;i<opera.length;i++){
 var number = document.getElementsByClassName("number");
 for(var i =0;i<number.length;i++){
 	number[i].addEventListener('click',function(){
-		var display=reverseNumberFormat(getDisplay());
-		if(display!=NaN){ //if output is a number
-			display=display+this.id;
-			printDisplay(display);
-		}
+		var pantalla = document.getElementById("display")
+				if (pantalla.innerHTML.length<8){
+					var display=reverseNumberFormat(getDisplay());
+					if(display!=NaN){
+						display=display+this.id;
+						printDisplay(display);
+					}
+				}
 	});
 }
 
